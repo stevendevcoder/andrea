@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Red+Hat+Display:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Red Hat Display', sans-serif;
+    overflow: hidden;
+}
+
+
+
+.contenedor {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+.botones {
+    display: flex;
+    gap: 40px;
+}
+
+
+.botones a {
+    z-index: 999;
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.274);
+    transition: all .3s;
+}
+
+.si {
+    background-color: rgb(35, 255, 35);
+}
+.no {
+    background-color: rgb(218, 33, 33);
+}
+
+.countdown {
+    padding: 18px;
+    border: solid 10px rgb(50, 50, 50);
+    border-radius: 35px;
+  
+    font-family: 'Digital Numbers', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 125, 125);
+    text-shadow: 0 0 10px red;
+    
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 5);
+  }
+  
+  .countdown span {
+    text-align: end;
+    position: relative;
+    display: inline-block;
+    min-width: 80px;
+    height: 90px;
+    padding-bottom: 10px;
+  }
+  
+  .countdown span::after {
+    content: '88';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+  }
+  .countdown #dayElement::before {
+    content: 'DAYS';
+  }
+  .countdown #hourElement::before {
+    content: 'HOURS';
+  }
+  .countdown #minElement::before {
+    content: 'MINS';
+  }
+  .countdown #secElement::before {
+    content: 'SECS';
+  }
+  .countdown span::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgray;
+    text-shadow: none;
+  }
+
+  #dayElement, #hourElement {
+    display: none;
+  }
